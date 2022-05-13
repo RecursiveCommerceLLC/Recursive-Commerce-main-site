@@ -24,27 +24,44 @@
 		</style>
 	</head>
 	<body>
-
 		<ul>
 			<li><a href="index.html">[Mission]</a></li>
 			<li><a href="contact.html">[Contact]</a></li>
 		</ul>
 
-			<h1>Recursive Commerce Site coming soon!</h1>
+		<h1>Recursive Commerce Site coming soon!</h1>
+
+		<div class="container">
+			<canvas width="600" height="300"></canvas>
+		</div>
 
 		<script>
 			/**
+			Built to last by Jim Collins
+			1. Be a clock builder - an architect- not a time teller
+			2. Embrace the “Genius of the AND”
+			3. Preserve the core / stimulate progress
+			4. Seek consistent alignment
+			**/
 
-  Recurrsive Commerce
+			const ctx = document.querySelector("canvas").getContext("2d");
 
-	Built to last by Jim Collins
-	1. Be a clock builder - an architect- not a time teller
-	2. Embrace the “Genius of the AND”
-	3. Preserve the core / stimulate progress
-	4. Seek consistent alignment
+			function branch(length, angle, scale) {
+				ctx.fillRect(1, 1, 1, length);
+				if (length < 8) return;
+				ctx.save();
+				ctx.translate(0, length);
+				ctx.rotate(-angle);
+				branch(length * scale, angle, scale);
+				ctx.rotate(2 * angle);
+				branch(length * scale, angle, scale);
+				ctx.restore();
+			}
 
-
-	**/
+			setTimeout(() => {
+				ctx.translate(300, 1);
+				branch(60, 0.5, 0.8);
+			}, 1000);
 		</script>
 	</body>
 </html>
