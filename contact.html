@@ -14,18 +14,50 @@
 				list-style-type: none;
 				justify-content: space-evenly;
 			}
+			textarea {
+				width: 600px;
+				height: 300px;
+			}
 		</style>
-
 	</head>
 
 	<body>
-
 		<ul>
 			<li><a href="index.html">[Mission]</a></li>
 			<li><a href="contact.html">[Contact]</a></li>
 		</ul>
 
-		<h1>Stay tuned for contact form</h1>
+		<h1>Recursive Commerce Contact Form</h1>
+		<form>
+			<input
+				placeholder="Full Name"
+				type="text"
+				id="name"
+				name="name"
+				required
+			/>
+			<input placeholder="Email" type="text" id="email" name="email" required />
+			<input placeholder="Number" type="text" id="lname" name="lname" />
 
+			<br />
+			<br />
+
+			Reason for reaching out:
+			<br />
+			<textarea></textarea>
+
+			<br />
+			<button class="submit">Submit</button>
+		</form>
+
+		<script>
+			const submit = document.querySelector(".submit");
+
+			submit.addEventListener("click", () => {
+				alert(
+					"Thank you for reaching out, you should hear back from us shortly"
+				);
+			});
+		</script>
 	</body>
 </html>
