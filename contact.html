@@ -1,7 +1,6 @@
 <html class="js" lang="en">
 	<head>
 		<title>Contact Recursive Commerce</title>
-
 		<style>
 			body {
 				text-align: center;
@@ -17,6 +16,9 @@
 			textarea {
 				width: 600px;
 				height: 300px;
+			}
+			input {
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -36,15 +38,39 @@
 				name="name"
 				required
 			/>
-			<input placeholder="Email" type="text" id="email" name="email" required />
-			<input placeholder="Number" type="text" id="lname" name="lname" />
+			<input
+				placeholder="Email"
+				type="email"
+				id="email"
+				name="email"
+				required
+			/>
+			<input
+				placeholder="Phone Number"
+				type="number"
+				id="number"
+				name="number"
+				required
+			/>
+
+			<br />
+			<br />
+
+			<input
+				placeholder="Subject"
+				type="text"
+				id="number"
+				name="subject"
+				required
+				style="width: 600px"
+			/>
 
 			<br />
 			<br />
 
 			Reason for reaching out:
 			<br />
-			<textarea></textarea>
+			<textarea required></textarea>
 
 			<br />
 			<button class="submit">Submit</button>
@@ -55,7 +81,7 @@
 
 			submit.addEventListener("click", () => {
 				alert(
-					"Thank you for reaching out, you should hear back from us shortly"
+					"Thank you for reaching out. \nSerious inquiries should hear back from us shortly."
 				);
 			});
 		</script>
