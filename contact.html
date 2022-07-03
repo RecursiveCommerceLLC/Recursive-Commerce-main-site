@@ -5,21 +5,9 @@
 			body {
 				text-align: center;
 			}
-			ul {
-				margin: 0;
-				padding: 0;
-				display: flex;
-				text-align: center;
-				list-style-type: none;
-				justify-content: space-evenly;
-			}
-			textarea {
-				width: 600px;
-				height: 300px;
-				text-align: center;
-			}
 			input {
 				text-align: center;
+				width: 400px;
 			}
 		</style>
 	</head>
@@ -30,61 +18,25 @@
 			<li><a href="contact.html">[Contact]</a></li>
 		</ul>
 
-		<h1>Recursive Commerce Contact Form</h1>
-		<form>
+		<h1>Contact Recursive Commerce</h1>
+		<form
+			action="mailto:support@recursivecommerce.com"
+			method="POST"
+			enctype="multipart/form-data"
+			name="EmailForm"
+		>
 			<input
-				placeholder="Full Name"
-				type="text"
-				id="name"
-				name="name"
-				required
-			/>
-			<input
-				placeholder="Email"
+				placeholder="Enter your Email"
 				type="email"
 				id="email"
 				name="email"
 				required
 			/>
-			<input
-				placeholder="Phone Number"
-				type="number"
-				id="number"
-				name="number"
-				required
-			/>
 
 			<br />
 			<br />
-
-			<input
-				placeholder="Subject"
-				type="text"
-				id="number"
-				name="subject"
-				required
-				style="width: 600px"
-			/>
-
-			<br />
-			<br />
-
-			Reason for reaching out:
-			<br />
-			<textarea required></textarea>
-
-			<br />
-			<button class="submit">Submit</button>
+			<input class="submit" type="submit" value="Submit">
 		</form>
 
-		<script>
-			const submit = document.querySelector(".submit");
-
-			submit.addEventListener("click", () => {
-				alert(
-					"Thank you for reaching out. \nSerious inquiries should hear back from us shortly."
-				);
-			});
-		</script>
 	</body>
 </html>
